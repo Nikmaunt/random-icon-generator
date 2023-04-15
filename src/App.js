@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import * as icons from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [icon, setIcon] = useState("");
+    const [trigger, setTrigger] = useState(false);
+    const [rendered, setRendered] = useState(false);
+
+    const Icon = icon ? icons[icon] : null;
+    const iconsMaxNumber = Object.keys(icons).length
+
+    function randomInteger() {
+        let rand = 0 - 0.5 + Math.random() * (iconsMaxNumber - 0 + 1);
+        setIcon((Object.keys(icons)[Math.round(rand)]));
+    }
+
+    useEffect(() => {
+        if (rendered === true) {
+            setTimeout(() => randomInteger(), 3000);
+        }
+        setRendered(true)
+    }, [trigger]);
+
+
+    return (
+        <div className="App">
+            <button onClick={() => {
+                setTrigger(!trigger)
+            }}>Get random icon
+            </button>
+            {icon ? (
+                <div className='icon'>
+                    <FontAwesomeIcon icon={Icon}/>
+                </div>
+            ) : (
+                <span className='text'>Click the button</span>
+            )}
+        </div>
+    );
 }
 
 export default App;
