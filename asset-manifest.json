@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/random-icon-generator/static/css/main.68134d31.css",
-    "main.js": "/random-icon-generator/static/js/main.a962429f.js",
+    "main.css": "/random-icon-generator/static/css/main.3b9521f4.css",
+    "main.js": "/random-icon-generator/static/js/main.a89d73e9.js",
     "index.html": "/random-icon-generator/index.html",
-    "main.68134d31.css.map": "/random-icon-generator/static/css/main.68134d31.css.map",
-    "main.a962429f.js.map": "/random-icon-generator/static/js/main.a962429f.js.map"
+    "main.3b9521f4.css.map": "/random-icon-generator/static/css/main.3b9521f4.css.map",
+    "main.a89d73e9.js.map": "/random-icon-generator/static/js/main.a89d73e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.68134d31.css",
-    "static/js/main.a962429f.js"
+    "static/css/main.3b9521f4.css",
+    "static/js/main.a89d73e9.js"
   ]
 }
